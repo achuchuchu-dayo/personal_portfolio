@@ -1,5 +1,7 @@
 <h1>Achoo's Portofolio</h1>
-<h2>checking whether the vscode is working...</h2>
+{% load static %}
+<img src="{% static 'portofolio/a.jpg' %}">
+<a href="{% static 'portofolio/test.pdf' %}">Test PDF</a>
 {% for project in projects %}
 {{project.title}}
 {{project.discription}}
