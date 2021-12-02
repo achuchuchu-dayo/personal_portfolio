@@ -1,3 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import Blog
+#Adminのサイトで表示させたいクラスを書く
+admin.site.register(Blog)
