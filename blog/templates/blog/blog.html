@@ -1,6 +1,6 @@
 <h1>Welcome to the blog page🐻‍❄️</h1>
 {% for blog in blogs%}
-<h2>{{blog.title}}</h2>
+<a href="{% url 'blog:detail' blog.id %}"><h2>{{blog.title}}</h2></a>
 <br>
 {{blog.date}}
 <br>
