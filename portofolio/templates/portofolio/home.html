@@ -1,6 +1,8 @@
 <h1>Achoo's Portofolio</h1>
 {% load static %}
 <img src="{% static 'portofolio/a.jpg' %}">
+<a href= "{% url 'blog:all_blogs' %}">Blog</a>
+<br>
 <a href="{% static 'portofolio/test.pdf' %}">Test PDF</a>
 {% for project in projects %}
 {{project.title}}

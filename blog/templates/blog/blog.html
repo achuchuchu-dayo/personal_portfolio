@@ -1,9 +1,10 @@
 <h1>Welcome to the blog page🐻‍❄️</h1>
+<h2>Achuchuchu has written {{ blogs.count }} blog{{ blogs.count|pluralize}}</h2>
 {% for blog in blogs%}
 <a href="{% url 'blog:detail' blog.id %}"><h2>{{blog.title}}</h2></a>
 <br>
-{{blog.date}}
+{{blog.date | date:'M d Y'}}
 <br>
-{{blog.discription}}
+{{blog.discription |striptags| truncatechars:100 }}
 <br>
 {% endfor %}
